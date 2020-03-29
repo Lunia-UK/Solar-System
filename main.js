@@ -15,6 +15,15 @@ materialMercury.bumpMap = THREE.ImageUtils.loadTexture('texture/mercury/mercuryb
 materialMercury.bumpScale = 0.05
 scene.add( mercuryMesh );
 
+// Venus 
+const textureVenus = new THREE.TextureLoader().load('texture/Venus/venusmap.jpg');
+let geometryVenus = new THREE.SphereGeometry( 13, 32, 32 );
+const materialVenus = new THREE.MeshBasicMaterial({ map: textureVenus });
+let venusMesh = new THREE.Mesh( geometryVenus, materialVenus );
+materialVenus.bumpMap = THREE.ImageUtils.loadTexture('texture/Venus/venusbump.jpg')
+materialVenus.bumpScale = 0.05
+scene.add( venusMesh );
+
 // Moon 
 const textureMoon = new THREE.TextureLoader().load('texture/moon/moonmap2k.jpg');
 let geometryMoon = new THREE.SphereGeometry( 13, 32, 32 );
@@ -28,19 +37,29 @@ camera.position.z = 50;
 
 const btnMoon = document.querySelector('#moon')
 const btnMercury = document.querySelector('#mercury')
+const btnVenus = document.querySelector('#venus')
 btnMoon.addEventListener('click', function displayMoon(){
     scene.add( moonMesh )
+    scene.remove( venusMesh )
     scene.remove( mercuryMesh )
 })
 btnMercury.addEventListener('click', function displayMercury(){
-    scene.add( mercuryMesh )
     scene.remove( moonMesh )
+    scene.remove( venusMesh )
+    scene.add( mercuryMesh )
+})
+btnVenus.addEventListener('click', function displayMercury(){
+    scene.remove( moonMesh )
+    scene.add( venusMesh )
+    scene.remove( mercuryMesh )
+    
 })
 
 let animate = function () {
     requestAnimationFrame( animate );
 
     moonMesh.rotation.y += 0.0025;
+    venusMesh.rotation.y += 0.0025;
     mercuryMesh.rotation.y += 0.0025;
 
     renderer.render( scene, camera );
