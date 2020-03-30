@@ -30,6 +30,17 @@ materialVenus.bumpMap = THREE.ImageUtils.loadTexture('texture/Venus/venusbump.jp
 materialVenus.bumpScale = 0.05
 scene.add( venusMesh );
 
+// Earth 
+const textureEarth = new THREE.TextureLoader().load('texture/Earth/earthmap1k.jpg');
+let geometryEarth = new THREE.SphereGeometry( 13, 32, 32 );
+const materialEarth = new THREE.MeshBasicMaterial({ map: textureEarth });
+let earthMesh = new THREE.Mesh( geometryEarth, materialEarth );
+materialEarth.bumpMap = THREE.ImageUtils.loadTexture('texture/Earth/earthbump1k.jpg')
+materialEarth.bumpScale = 0.05
+materialEarth.specularMap    = THREE.ImageUtils.loadTexture('images/earthspec1k.jpg')
+materialEarth.specular  = new THREE.Color('grey')
+scene.add( earthMesh );
+
 // Moon 
 const textureMoon = new THREE.TextureLoader().load('texture/moon/moonmap2k.jpg');
 let geometryMoon = new THREE.SphereGeometry( 13, 32, 32 );
@@ -61,6 +72,7 @@ const btnVenus = document.querySelector('#venus')
 const btnMars = document.querySelector('#mars')
 const btnJupitaire = document.querySelector('#jupitaire')
 const btnSun = document.querySelector('#sun')
+const btnEarth = document.querySelector('#earth')
 btnMoon.addEventListener('click', function displayMoon(){
     scene.add( moonMesh )
     scene.remove( venusMesh )
@@ -68,6 +80,7 @@ btnMoon.addEventListener('click', function displayMoon(){
     scene.remove( marsMesh )
     scene.remove( jupitaireMesh )
     scene.remove( sunMesh )
+    scene.remove( earthMesh )
 })
 btnMercury.addEventListener('click', function displayMercury(){
     scene.remove( moonMesh )
@@ -76,6 +89,7 @@ btnMercury.addEventListener('click', function displayMercury(){
     scene.remove( marsMesh )
     scene.remove( jupitaireMesh )
     scene.remove( sunMesh )
+    scene.remove( earthMesh )
 })
 btnVenus.addEventListener('click', function displayMercury(){
     scene.remove( moonMesh )
@@ -83,7 +97,8 @@ btnVenus.addEventListener('click', function displayMercury(){
     scene.remove( mercuryMesh )
     scene.remove( marsMesh )
     scene.remove( jupitaireMesh )
-    scene.remove( sunMesh )    
+    scene.remove( sunMesh )
+    scene.remove( earthMesh )  
 })
 
 btnMars.addEventListener('click', function displayMercury(){
@@ -92,7 +107,8 @@ btnMars.addEventListener('click', function displayMercury(){
     scene.remove( mercuryMesh )
     scene.add( marsMesh )  
     scene.remove( jupitaireMesh )
-    scene.remove( sunMesh ) 
+    scene.remove( sunMesh )
+    scene.remove( earthMesh )
 })
 
 btnJupitaire.addEventListener('click', function displayMercury(){
@@ -101,7 +117,8 @@ btnJupitaire.addEventListener('click', function displayMercury(){
     scene.remove( mercuryMesh )
     scene.remove( marsMesh )  
     scene.add( jupitaireMesh )
-    scene.remove( sunMesh ) 
+    scene.remove( sunMesh )
+    scene.remove( earthMesh )
 })
 
 btnSun.addEventListener('click', function displayMercury(){
@@ -110,7 +127,18 @@ btnSun.addEventListener('click', function displayMercury(){
     scene.remove( mercuryMesh )
     scene.remove( marsMesh )  
     scene.remove( jupitaireMesh )
-    scene.add( sunMesh ) 
+    scene.add( sunMesh )
+    scene.remove( earthMesh ) 
+})
+
+btnEarth.addEventListener('click', function displayMercury(){
+    scene.remove( moonMesh )
+    scene.remove( venusMesh )
+    scene.remove( mercuryMesh )
+    scene.remove( marsMesh )  
+    scene.remove( jupitaireMesh )
+    scene.remove( sunMesh )
+    scene.add( earthMesh ) 
 })
 
 let animate = function () {
@@ -122,6 +150,7 @@ let animate = function () {
     marsMesh.rotation.y += 0.0025;
     jupitaireMesh.rotation.y += 0.0025;
     sunMesh.rotation.y += 0.0025;
+    earthMesh.rotation.y += 0.0025;
 
     renderer.render( scene, camera );
 };
