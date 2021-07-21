@@ -6,6 +6,7 @@ import Stats from './Utils/Stats.js'
 import Resources from './Resources.js'
 import Renderer from './Renderer.js'
 import Camera from './Camera.js'
+import Lights from './Lights.js'
 import World from './World.js'
 
 import assets from './assets.js'
@@ -30,6 +31,7 @@ export default class Experience
         this.setStats()
         this.setScene()
         this.setCamera()
+        this.setLights()
         this.setRenderer()
         this.setResources()
         this.setWorld()
@@ -69,11 +71,16 @@ export default class Experience
     setScene()
     {
         this.scene = new THREE.Scene()
+        this.sceneSun = new THREE.Scene();
     }
 
     setCamera()
     {
         this.camera = new Camera()
+    }
+
+    setLights() {
+        this.lights = new Lights()
     }
 
     setRenderer()

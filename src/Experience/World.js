@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+import Star from './World/Star'
 
 export default class World
 {
@@ -13,18 +14,14 @@ export default class World
         {
             if(_group.name === 'base')
             {
-                this.setDummy()
+                this.setStar()
             }
         })
     }
 
-    setDummy()
+    setStar()
     {
-        const cube = new THREE.Mesh(
-            new THREE.BoxGeometry(1, 1, 1),
-            new THREE.MeshBasicMaterial({ map: this.resources.items.lennaTexture })
-        )
-        this.scene.add(cube)        
+        this.star = new Star()
     }
 
     resize()
