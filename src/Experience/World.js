@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import Star from './World/Star'
+import Stars from './World/Stars'
 
 export default class World
 {
@@ -15,6 +16,7 @@ export default class World
             if(_group.name === 'base')
             {
                 this.setStar()
+                this.setStars()
             }
         })
     }
@@ -22,6 +24,11 @@ export default class World
     setStar()
     {
         this.star = new Star()
+    }
+
+    setStars()
+    {
+        this.stars = new Stars()
     }
 
     resize()
