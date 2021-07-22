@@ -34,6 +34,7 @@ export default class Star {
         })
 
         this.sun = new THREE.Mesh(this.geometryStar, this.materialSun)
+        this.sun.scale.set(5,5,5)
         this.scene.add(this.sun)
 
         this.cubeRenderTarget1 = new THREE.WebGLCubeRenderTarget( 256, {
