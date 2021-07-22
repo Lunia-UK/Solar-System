@@ -1,0 +1,162 @@
+{
+    "systemName": "Solar system",
+    "description": "",
+    "planets" : [
+        {
+            "astreName" : "Mercury",
+            "description": "",
+            "solDistance": 57910000,
+            "Xposition": 15,
+            "Yposition": 0,
+            "Zposition": 0,
+            "size": 1,
+            "reelSize": 2440,
+            "ring": "",
+            "textureColor": "mercuryMap",
+            "textureHeight": "mercuryHeight",
+            "color": "rgb(82, 186, 198)",
+            "moons": [
+            ]
+        },
+        {
+            "astreName" : "Venus",
+            "description": "",
+            "solDistance": 108200000,
+            "Xposition": 22,
+            "Yposition": 0,
+            "Zposition": 0,
+            "size": 2,
+            "reelSize": 6052,
+            "ring": "",
+            "textureColor": "venusMap",
+            "textureHeight": "venusHeight",
+            "color": "rgb(82, 186, 198)",
+            "moons": [
+            ]
+        },
+        {
+            "astreName" : "Earth",
+            "description": "",
+            "solDistance": 149600000,
+            "Xposition": 35,
+            "Yposition": 0,
+            "Zposition": 0,
+            "size": 2,
+            "reelSize": 6371,
+            "ring": "",
+            "textureColor": "earthMap",
+            "textureHeight": "eartHeight",
+            "color": "rgb(82, 186, 198)",
+            "moons": [
+                {
+                    "name": "Moon",
+                    "Xposition": 1,
+                    "Yposition": 0,
+                    "Zposition": 1,
+                    "size":1000,
+                    "texture": "moon",
+                    "color": "rgb(82, 186, 198)"
+                }
+            ]
+        },
+        {
+            "astreName" : "Mars",
+            "description": "",
+            "solDistance": 227940000,
+            "Xposition": 45,
+            "Yposition": 0,
+            "Zposition": 0,
+            "reelSize": 3390,
+            "size": 1.5,
+            "ring": "",
+            "textureColor": "marshMap",
+            "textureHeight": "marsHeight",
+            "color": "rgb(82, 186, 198)",
+            "moons": [
+            ]
+        },
+        {
+            "astreName" : "Jupiter",
+            "description": "",
+            "solDistance": 778330000,
+            "Xposition": 80,
+            "Yposition": 0,
+            "Zposition": 0,
+            "size": 6,
+            "reelSize": 69911,
+            "ring": "",
+            "textureColor": "jupiterMap",
+            "textureHeight": "",
+            "color": "rgb(82, 186, 198)",
+            "moons": [
+
+            ]
+        },
+        {
+            "astreName" : "Saturn",
+            "description": "",
+            "solDistance": 1429400000,
+            "Xposition": 111,
+            "Yposition": 0,
+            "Zposition": 0,
+            "size": 5,
+            "reelSize": 58232,
+            "ring": "staturnRing",
+            "textureColor": "saturnMap",
+            "textureHeight": "",
+            "color": "rgb(82, 186, 198)",
+            "moons": [
+
+            ]
+        },
+        {
+            "astreName" : "Uranus",
+            "description": "",
+            "solDistance": 2870990000,
+            "Xposition": 140,
+            "Yposition": 0,
+            "Zposition": 0,
+            "size": 4,
+            "reelSize": 25362,
+            "ring": "uranusRing",
+            "textureColor": "uranusMap",
+            "textureHeight": "",
+            "color": "rgb(82, 186, 198)",
+            "moons": [
+
+            ]
+        },
+        {
+            "astreName" : "Neptune",
+            "description": "",
+            "solDistance": 4504300000,
+            "Xposition": 160,
+            "Yposition": 0,
+            "Zposition": 0,
+            "size": 4,
+            "reelSize": 24622,
+            "ring": "",
+            "textureColor": "neptuneMap",
+            "textureHeight": "neptuneHeight",
+            "color": "rgb(82, 186, 198)",
+            "moons": [
+            ]
+        },
+        {
+            "astreName" : "Pluto",
+            "description": "",
+            "solDistance": 5913520000,
+            "Xposition": 170,
+            "Yposition": 0,
+            "Zposition": 0,
+            "size": 0.7,
+            "reelSize":	2320,
+            "ring": "",
+            "textureColor": "plutoMap",
+            "textureHeight": "plutoHeight",
+            "color": "rgb(82, 186, 198)",
+            "moons": [
+            ]
+        }
+    ]
+}

@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import Star from './World/Star'
 import Stars from './World/Stars'
+import Planet from './World/Planet'
 
 export default class World
 {
@@ -17,6 +18,7 @@ export default class World
             {
                 this.setStar()
                 this.setStars()
+                this.setPlanets()
             }
         })
     }
@@ -29,6 +31,14 @@ export default class World
     setStars()
     {
         this.stars = new Stars()
+    }
+
+    setPlanets() {
+        this.dataPlanets = this.resources.items.data.planets
+        for(const dataPlanet of this.dataPlanets) {
+            new Planet(dataPlanet)
+        }
+
     }
 
     resize()

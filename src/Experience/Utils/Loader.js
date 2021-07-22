@@ -68,6 +68,21 @@ export default class Resources extends EventEmitter
             }
         })
 
+        // Json
+        this.loaders.push({
+            extensions: ['json'],
+            action: async (_resource) => {
+                try {
+                    this.result = await fetch(_resource.source);
+                    this._data = await this.result.json();
+                    this.fileLoadEnd(_resource, this._data)
+                    return this._data;
+                } catch (error) {
+                    console.log(error)
+                }
+            }
+        })
+
         // Draco
         const dracoLoader = new DRACOLoader()
         dracoLoader.setDecoderPath('draco')
