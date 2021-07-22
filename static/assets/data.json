@@ -14,7 +14,7 @@
             "ring": "",
             "textureColor": "mercuryMap",
             "textureHeight": "mercuryHeight",
-            "color": "rgb(82, 186, 198)",
+            "color": "rgb(50, 50, 50)",
             "moons": [
             ]
         },
@@ -30,7 +30,7 @@
             "ring": "",
             "textureColor": "venusMap",
             "textureHeight": "venusHeight",
-            "color": "rgb(82, 186, 198)",
+            "color": "rgb(50, 50, 50)",
             "moons": [
             ]
         },
@@ -46,7 +46,7 @@
             "ring": "",
             "textureColor": "earthMap",
             "textureHeight": "eartHeight",
-            "color": "rgb(82, 186, 198)",
+            "color": "rgb(50, 50, 50)",
             "moons": [
                 {
                     "name": "Moon",
@@ -55,7 +55,7 @@
                     "Zposition": 1,
                     "size":1000,
                     "texture": "moon",
-                    "color": "rgb(82, 186, 198)"
+                    "color": "rgb(50, 50, 50)"
                 }
             ]
         },
@@ -71,7 +71,7 @@
             "ring": "",
             "textureColor": "marshMap",
             "textureHeight": "marsHeight",
-            "color": "rgb(82, 186, 198)",
+            "color": "rgb(50, 50, 50)",
             "moons": [
             ]
         },
@@ -87,7 +87,7 @@
             "ring": "",
             "textureColor": "jupiterMap",
             "textureHeight": "",
-            "color": "rgb(82, 186, 198)",
+            "color": "rgb(50, 50, 50)",
             "moons": [
 
             ]
@@ -104,7 +104,7 @@
             "ring": "staturnRing",
             "textureColor": "saturnMap",
             "textureHeight": "",
-            "color": "rgb(82, 186, 198)",
+            "color": "rgb(50, 50, 50)",
             "moons": [
 
             ]
@@ -121,7 +121,7 @@
             "ring": "uranusRing",
             "textureColor": "uranusMap",
             "textureHeight": "",
-            "color": "rgb(82, 186, 198)",
+            "color": "rgb(50, 50, 50)",
             "moons": [
 
             ]
@@ -138,7 +138,7 @@
             "ring": "",
             "textureColor": "neptuneMap",
             "textureHeight": "neptuneHeight",
-            "color": "rgb(82, 186, 198)",
+            "color": "rgb(50, 50, 50)",
             "moons": [
             ]
         },
@@ -154,7 +154,7 @@
             "ring": "",
             "textureColor": "plutoMap",
             "textureHeight": "plutoHeight",
-            "color": "rgb(82, 186, 198)",
+            "color": "rgb(50, 50, 50)",
             "moons": [
             ]
         }
