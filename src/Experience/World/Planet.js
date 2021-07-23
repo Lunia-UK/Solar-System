@@ -1,7 +1,5 @@
 import * as THREE from 'three'
 import Time from '../Utils/Time'
-import Orbit from "./Orbit";
-
 export default class Planet {
     constructor(data, _options) {
         this.experience = window.experience
@@ -14,10 +12,12 @@ export default class Planet {
         this.time = new Time()
 
         this.setPlanets()
+        this.setHover()
         if(this.data.ring){
             this.setRing()
         }
         this.setOrbit()
+
     }
 
     setPlanets() {
@@ -41,6 +41,30 @@ export default class Planet {
         this.planetGroup.position.set(this.data.Xposition,this.data.Yposition,this.data.Zposition)
         this.planetGroup.add(this.astreMesh)
         this.objectToTest.push(this.astreMesh)
+    }
+
+    setHover() {
+        this.raduis = Math.sqrt((this.data.size)**2.5 + (this.data.size)**2.5)
+        this.curveOrbit = new THREE.EllipseCurve(
+            0,  0,            // ax, aY
+            this.raduis, this.raduis,           // xRadius, yRadius
+            0,  2 * Math.PI,  // aStartAngle, aEndAngle
+            false,            // aClockwise
+            0                 // aRotation
+        );
+        this.pointsOrbit = this.curveOrbit.getPoints( 50 );
+        this.geometryOrbit = new THREE.BufferGeometry().setFromPoints( this.pointsOrbit );
+        this.materialOrbit = new THREE.LineBasicMaterial( {
+            color : new THREE.Color( 0xFFB525 )
+        });
+
+        this.orbit = new THREE.Line( this.geometryOrbit,this.materialOrbit );
+        this.orbit.rotateX(Math.PI / 8)
+        this.orbit.visible = false
+        this.time.on('tick', () => {
+            this.orbit.rotateX(Math.PI / 2)
+        })
+        this.planetGroup.add(this.orbit)
     }
 
     setRing() {
@@ -78,3 +102,5 @@ export default class Planet {
     destroy() {
     }
 }
+import Orbit from "./Orbit";
+

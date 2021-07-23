@@ -36,30 +36,30 @@ export default class Raycaster {
 
                 if(this.intersects.length && this.objectFocus !== this.intersects[0].object) {
                     this.currentIntersect = this.intersects[0]
+                    this.currentIntersect.object.parent.children[1].visible = true
                 } else {
                     this.currentIntersect = null
                 }
             }
             for(const object of this.objectToTest) {
                 if(!this.intersects.find(intersect => intersect.object === object)) {
+                    object.parent.children[1].visible = false
                     if(object !== this.objectFocus){
                     }
                 }
             }
 
         })
-        this.click();
+        this.dblClick();
 
     }
 
-    click() {
+    dblClick() {
         window.addEventListener(
-            "click",
+            "dblclick",
             () => {
                 if(this.currentIntersect && this.objectFocus !== this.currentIntersect.object) {
-                    console.log(this.currentIntersect.object)
                     this.objectFocus = this.currentIntersect.object;
-                    console.log( this.objectFocus)
                     this.x = this.currentIntersect.object.parent.position.x
                     this.y = this.currentIntersect.object.parent.position.y
                     this.z = this.currentIntersect.object.parent.position.z
