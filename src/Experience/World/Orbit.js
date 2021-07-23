@@ -35,8 +35,7 @@ export default class CreateOrbit  {
     this.orbit = new THREE.Line( this.geometryOrbit,this.materialOrbit );
     this.orbit.focusColor = this.focusColor
     this.orbit.color = this.color
-    this.orbit.rotateX(Math.PI/2)
-    this.orbit.position.set(- this.x / this.scale,0, - this.z / this.scale)
+    this.orbit.rotateX(Math.PI/ 2)
     this.group.add(this.orbit)
 
   }

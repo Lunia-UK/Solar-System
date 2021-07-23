@@ -65,7 +65,7 @@ export default class Planet {
     }
 
     setOrbit() {
-        new Orbit(this.planetGroup, 1, this.data.Xposition, this.data.Zposition, this.data.color)
+        new Orbit(this.scene, 1, this.data.Xposition, this.data.Zposition, this.data.color)
     }
 
     resize() {
