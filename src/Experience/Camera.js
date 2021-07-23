@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import { TrackballControls } from 'three/examples/jsm/controls/TrackballControls.js'
 
 export default class Camera
 {
@@ -49,9 +50,17 @@ export default class Camera
         this.modes.debug.orbitControls.enabled = this.modes.debug.active
         this.modes.debug.orbitControls.screenSpacePanning = true
         this.modes.debug.orbitControls.enableKeys = false
+        this.modes.debug.orbitControls.enableZoom = false
         this.modes.debug.orbitControls.zoomSpeed = 0.25
         this.modes.debug.orbitControls.enableDamping = true
         this.modes.debug.orbitControls.update()
+
+        this.modes.debug.trackballControls = new TrackballControls(this.modes.debug.instance, this.targetElement);
+        this.modes.debug.trackballControls.noRotate = true;
+        this.modes.debug.trackballControls.noPan = true;
+        this.modes.debug.trackballControls.noZoom = false;
+        this.modes.debug.trackballControls.zoomSpeed = 1.53
+        this.modes.debug.trackballControls.update()
     }
 
 
@@ -69,8 +78,13 @@ export default class Camera
 
     update()
     {
+        let target = this.modes.debug.orbitControls.target;
         // Update debug orbit controls
         this.modes.debug.orbitControls.update()
+
+        // Update debug trackball controls
+        this.modes.debug.trackballControls.target.set(target.x, target.y, target.z);
+        this.modes.debug.trackballControls.update()
 
         // Apply coordinates
         this.instance.position.copy(this.modes[this.mode].instance.position)
