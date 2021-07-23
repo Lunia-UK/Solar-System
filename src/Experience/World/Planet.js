@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import Time from '../Utils/Time'
+import Orbit from "./Orbit";
 
 export default class Planet {
     constructor(data, _options) {
@@ -15,6 +16,7 @@ export default class Planet {
         if(this.data.ring){
             this.setRing()
         }
+        this.setOrbit()
     }
 
     setPlanets() {
@@ -60,6 +62,10 @@ export default class Planet {
         this.ring.rotation.x = Math.PI / 2
         this.ring.scale.set(this.data.size / 2 ,this.data.size / 2,this.data.size / 2);
         this.planetGroup.add(this.ring)
+    }
+
+    setOrbit() {
+        new Orbit(this.scene, 1, this.data.Xposition, this.data.Zposition, this.data.color)
     }
 
     resize() {
