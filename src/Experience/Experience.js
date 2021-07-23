@@ -8,6 +8,7 @@ import Renderer from './Renderer.js'
 import Camera from './Camera.js'
 import Lights from './Lights.js'
 import World from './World.js'
+import Raycaster from './Raycaster.js'
 
 import assets from './assets.js'
 
@@ -35,6 +36,7 @@ export default class Experience
         this.setRenderer()
         this.setResources()
         this.setWorld()
+        this.setRaycaster()
         
         this.sizes.on('resize', () =>
         {
@@ -98,6 +100,10 @@ export default class Experience
     setWorld()
     {
         this.world = new World()
+    }
+
+    setRaycaster() {
+        this.raycaster = new Raycaster()
     }
 
     update()

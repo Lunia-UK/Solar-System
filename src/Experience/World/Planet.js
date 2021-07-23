@@ -9,6 +9,7 @@ export default class Planet {
         this.scene = this.experience.scene
         this.resources = this.experience.resources
         this.debug = this.experience.debug
+        this.objectToTest = this.experience.raycaster.objectToTest
         this.data = data
         this.time = new Time()
 
@@ -39,7 +40,7 @@ export default class Planet {
         this.astreMesh.scale.set(this.data.size,this.data.size,this.data.size);
         this.planetGroup.position.set(this.data.Xposition,this.data.Yposition,this.data.Zposition)
         this.planetGroup.add(this.astreMesh)
-
+        this.objectToTest.push(this.astreMesh)
     }
 
     setRing() {

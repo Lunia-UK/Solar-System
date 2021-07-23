@@ -43,10 +43,10 @@ export default class AsteroidBelt {
             new THREE.BufferAttribute(this.positionsParticules, 3)
         );
         this.particlesMaterial = new THREE.PointsMaterial();
-        this.particlesMaterial.size = 0.2;
+        this.particlesMaterial.size = 3;
         this.particlesMaterial.transparent = true;
-        this.particlesMaterial.alphaTest = 0.0001
-        this.particlesMaterial.alphaMap = this.resources.items.starTexture
+        this.particlesMaterial.alphaTest = 0.001
+        this.particlesMaterial.alphaMap = this.resources.items.starsTexture
         this.particlesMaterial.opacity = 0.8
         this.asteroidBelt = new THREE.Points(this.particlesGeometry, this.particlesMaterial);
         this.group.add(this.asteroidBelt);
