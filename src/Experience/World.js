@@ -2,6 +2,7 @@ import * as THREE from 'three'
 import Star from './World/Star'
 import Stars from './World/Stars'
 import Planet from './World/Planet'
+import AsteroidBelt from "./World/AsteroidBelt";
 
 export default class World
 {
@@ -19,6 +20,7 @@ export default class World
                 this.setStar()
                 this.setStars()
                 this.setPlanets()
+                this.setAsteriodBelt()
             }
         })
     }
@@ -39,6 +41,10 @@ export default class World
             new Planet(dataPlanet)
         }
 
+    }
+
+    setAsteriodBelt() {
+        new AsteroidBelt(this.scene)
     }
 
     resize()
