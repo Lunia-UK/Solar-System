@@ -41,6 +41,9 @@ export default class Planet {
         this.planetGroup.position.set(this.data.Xposition,this.data.Yposition,this.data.Zposition)
         this.planetGroup.add(this.astreMesh)
         this.objectToTest.push(this.astreMesh)
+        if(this.astreMesh.name === 'Saturn' || this.astreMesh.name === 'Earth' || this.astreMesh.name === 'Neptune' || this.astreMesh.name === 'Uranus') {
+            this.planetGroup.rotateX(Math.PI / 10)
+        }
     }
 
     setHover() {
