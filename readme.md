@@ -1,11 +1,17 @@
 # Solar System
-3D solar system
 
-[solar-system-wine.vercel.app](solar-system-wine.vercel.app)
+Interactive 3d solar system map in Three.js
+
+Controls : 
+- Focus planet + informations : Double click on planet
+- Rotation : left click
+- Move : right lick 
+- Zoom : scroll
+
+[solar-system-wine.vercel.app](https://solar-system-wine.vercel.app/)
 
 ![Solar system](https://github.com/Lunia-UK/solar-system/blob/master/static/assets/picture.png?raw=true)
 
-Interactive 3d solar system map in Three.js
 
 ![Information saturn](https://github.com/Lunia-UK/solar-system/blob/master/static/assets/saturn.png?raw=true)
 
