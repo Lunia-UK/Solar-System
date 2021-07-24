@@ -7,7 +7,7 @@
 
 Interactive 3d solar system map in Three.js
 
-![Information saturn](https://github.com/Lunia-UK/solar-system/blob/master/static/assets/satrun.png?raw=true)
+![Information saturn](https://github.com/Lunia-UK/solar-system/blob/master/static/assets/saturn.png?raw=true)
 
 ### Setup
 ``` bash
