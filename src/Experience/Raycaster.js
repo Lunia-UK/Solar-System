@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import gsap from "gsap";
+import InfosPlanet from "./InfosPlanet";
 
 export default class Raycaster {
 
@@ -59,6 +60,8 @@ export default class Raycaster {
             "dblclick",
             () => {
                 if(this.currentIntersect && this.objectFocus !== this.currentIntersect.object) {
+                    this.infoContainer = document.querySelector('.infoContainer')
+                    this.infoContainer.style.left = '0%'
                     this.objectFocus = this.currentIntersect.object;
                     this.x = this.currentIntersect.object.parent.position.x
                     this.y = this.currentIntersect.object.parent.position.y
@@ -70,7 +73,10 @@ export default class Raycaster {
                         z: this.z + (this.currentIntersect.object.scale.x * 8 ),
                     })
                     this.objectFocusPosition = this.objectFocus.parent.position.clone()
-                    this.camera.modes.debug.orbitControls.target = this.objectFocusPosition
+                    this.controls.target = this.objectFocusPosition
+
+                    new InfosPlanet(this.objectFocus.name, this.resources.items)
+
                 }
             },
             false

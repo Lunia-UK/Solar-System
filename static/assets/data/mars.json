@@ -1,0 +1,33 @@
+{
+  "name": "Mars",
+  "description": "Mars is a dusty, cold, desert world with a very thin atmosphere. There is strong evidence Mars was—billions of years ago—wetter and warmer, with a thicker atmosphere.",
+  "distanceFromSun": "227,940,000",
+  "lengthOfYears": 687,
+  "planetType": "Terrestrial",
+  "pictures" : [
+    {
+      "name" : "Mercury",
+      "description": "",
+      "url": 57910000,
+      "credit": 6
+    },
+    {
+      "name" : "Mercury",
+      "description": "",
+      "url": 57910000,
+      "credit": 6
+    },
+    {
+      "name" : "Mercury",
+      "description": "",
+      "url": 57910000,
+      "credit": 6
+    },
+    {
+      "name" : "Mercury",
+      "description": "",
+      "url": 57910000,
+      "credit": 6
+    }
+  ]
+}

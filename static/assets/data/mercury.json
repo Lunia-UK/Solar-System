@@ -1,0 +1,34 @@
+{
+  "name": "Mecury",
+  "description": "Mercury—the smallest planet in our solar system and closest to the Sun—is only slightly larger than Earth's Moon. Mercury is the fastest planet, zipping around the Sun every 88 Earth days.",
+  "distanceFromSun": "57,910,000",
+  "lengthOfYears": 88,
+  "planetType": "Terrestrial",
+  "moons": 0,
+  "pictures" : [
+    {
+      "name" : "Mercury's Subtle Colors",
+      "description": "",
+      "url": "https://solarsystem.nasa.gov/system/resources/detail_files/439_MercurySubtleColors1200w.jpg",
+      "credit": "Source: NASA/Johns Hopkins University Applied Physics Laboratory/Carnegie"
+    },
+    {
+      "name" : "Lowlands in Mercury's North",
+      "description": "This image shows a perspective view, looking towards Mercury's north and colorized by the topographic height of the surface. ",
+      "url": "https://solarsystem.nasa.gov/system/resources/detail_files/773_PIA16388_detail.jpg",
+      "credit": "Source: NASA/Johns Hopkins University Applied Physics Laboratory/Carnegie Institution of Washington"
+    },
+    {
+      "name" : "Degas and Friends",
+      "description": "",
+      "url": "https://solarsystem.nasa.gov/system/resources/detail_files/742_degas_EW0258052721.png",
+      "credit": "Source: NASA/Johns Hopkins University Applied Physics Laboratory/Carnegie Institution of Washington"
+    },
+    {
+      "name" : "Van Eyck and the Formation",
+      "description": "",
+      "url": "https://solarsystem.nasa.gov/system/resources/detail_files/526_PIA18950.jpg",
+      "credit": "Source: The low Sun elevation in this scene emphasizes the topography of Van Eyck crater."
+    }
+  ]
+}
