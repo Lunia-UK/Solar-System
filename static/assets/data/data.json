@@ -50,10 +50,10 @@
             "moons": [
                 {
                     "name": "Moon",
-                    "Xposition": 1,
-                    "Yposition": 0,
-                    "Zposition": 1,
-                    "size":1000,
+                    "Xposition": 4,
+                    "Yposition": 1,
+                    "Zposition": 3,
+                    "size": 0.5,
                     "texture": "moon",
                     "color": "rgb(50, 50, 50)"
                 }

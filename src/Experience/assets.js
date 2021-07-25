@@ -15,7 +15,7 @@ export default [
                 {name: 'Neptune', source: '/assets/data/neptune.json', type: 'data'},
                 {name: 'Pluto', source: '/assets/data/pluto.json', type: 'data'},
                 {name: 'starsTexture', source: '/assets/textures/stars.png', type: 'texture'},
-                {name: 'earthData', source: '/assets/data/earth.json', type: 'data'},
+                {name: 'moonMap', source: '/assets/textures/moonmap1k.jpg', type: 'texture'},
                 {name: 'mercuryMap', source: '/assets/textures/mercurymap.jpg', type: 'texture'},
                 {name: 'mercuryHeight', source: '/assets/textures/mercurybump.jpg', type: 'texture'},
                 {name: 'venusMap', source: '/assets/textures/venusmap.jpg', type: 'texture'},

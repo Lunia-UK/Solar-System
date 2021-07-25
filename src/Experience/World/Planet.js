@@ -1,5 +1,7 @@
 import * as THREE from 'three'
 import Time from '../Utils/Time'
+import Orbit from "./Orbit";
+
 export default class Planet {
     constructor(data, _options) {
         this.experience = window.experience
@@ -16,6 +18,7 @@ export default class Planet {
         if(this.data.ring){
             this.setRing()
         }
+        this.setMoon()
         this.setOrbit()
 
     }
@@ -37,13 +40,14 @@ export default class Planet {
         this.astreMesh = new THREE.Mesh( this.geometry, this.material);
         this.astreMesh.geometry.setAttribute('uv2', new THREE.BufferAttribute(this.astreMesh.geometry.attributes.uv.array, 2))
         this.astreMesh.name = this.data.astreName
-        this.astreMesh.scale.set(this.data.size,this.data.size,this.data.size);
+        this.astreMesh.scale.set(this.data.size, this.data.size, this.data.size);
         this.planetGroup.position.set(this.data.Xposition,this.data.Yposition,this.data.Zposition)
-        this.planetGroup.add(this.astreMesh)
-        this.objectToTest.push(this.astreMesh)
         if(this.astreMesh.name === 'Saturn' || this.astreMesh.name === 'Earth' || this.astreMesh.name === 'Neptune' || this.astreMesh.name === 'Uranus') {
             this.planetGroup.rotateX(Math.PI / 10)
         }
+
+        this.planetGroup.add(this.astreMesh)
+        this.objectToTest.push(this.astreMesh)
     }
 
     setHover() {
@@ -96,6 +100,19 @@ export default class Planet {
         new Orbit(this.scene, 1, this.data.Xposition, this.data.Zposition, this.data.color)
     }
 
+    setMoon() {
+        if(this.data.moons.length > 0){
+            this.moonMaterial = this.material.clone()
+            const moonTextureMap = this.data.moons[0].name.toLowerCase() + 'Map'
+            this.moonMaterial.map = this.resources.items[moonTextureMap]
+            this.moon = new THREE.Mesh( this.geometry, this.moonMaterial);
+            this.moon.scale.set(this.data.moons[0].size, this.data.moons[0].size, this.data.moons[0].size);
+            this.moon.position.set(this.data.moons[0].Xposition, this.data.moons[0].Yposition, this.data.moons[0].Zposition)
+            this.planetGroup.add(this.moon)
+            this.objectToTest.push(this.moon)
+        }
+    }
+
     resize() {
     }
 
@@ -105,5 +122,5 @@ export default class Planet {
     destroy() {
     }
 }
-import Orbit from "./Orbit";
+
 
