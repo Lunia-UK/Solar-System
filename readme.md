@@ -1,6 +1,6 @@
 # Solar System
 
-Interactive 3d solar system map in Three.js
+Interactive 3d solar system map in Three.js for a little boy Jack. 
 
 Controls : 
 - Focus planet + informations : Double click on planet
