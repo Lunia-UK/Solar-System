@@ -3,6 +3,23 @@
     "description": "",
     "planets" : [
         {
+        "astreName" : "Jack",
+        "description": "",
+        "solDistance": 109600000,
+        "Xposition": -20,
+        "Yposition": 0,
+        "Zposition": -5,
+        "size": 1,
+        "reelSize": 2440,
+        "ring": "",
+        "textureColor": "mercuryMap",
+        "textureHeight": "mercuryHeight",
+        "color": "rgb(50, 50, 50)",
+        "moons": [
+        ]
+        },
+
+        {
             "astreName" : "Mercury",
             "description": "",
             "solDistance": 57910000,

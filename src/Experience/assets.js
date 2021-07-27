@@ -7,6 +7,7 @@ export default [
                 {name: 'data', source: '/assets/data/data.json', type: 'data'},
                 {name: 'Mercury', source: '/assets/data/mercury.json', type: 'data'},
                 {name: 'Venus', source: '/assets/data/venus.json', type: 'data'},
+                {name: 'Jack', source: '/assets/data/jack.json', type: 'data'},
                 {name: 'Earth', source: '/assets/data/earth.json', type: 'data'},
                 {name: 'Mars', source: '/assets/data/mars.json', type: 'data'},
                 {name: 'Jupiter', source: '/assets/data/jupiter.json', type: 'data'},

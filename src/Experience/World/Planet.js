@@ -1,6 +1,8 @@
 import * as THREE from 'three'
 import Time from '../Utils/Time'
 import Orbit from "./Orbit";
+import JackVextexShaders from '../../shaders/JackShaders/vertexShader.glsl'
+import JackFragmentsShaders from '../../shaders/JackShaders/fragmentShader.glsl'
 
 export default class Planet {
     constructor(data, _options) {
@@ -36,8 +38,24 @@ export default class Planet {
             this.material.displacementMap = this.resources.items[this.textureHeight]
             this.material.displacementScale = 0.05
         }
+        if(this.data.astreName === 'Jack') {
+            this.jackPlanetMaterial = new THREE.ShaderMaterial( {
 
-        this.astreMesh = new THREE.Mesh( this.geometry, this.material);
+                uniforms: {
+
+                    // resolution: { value: new THREE.Vector2() }
+
+                },
+
+                vertexShader:  JackVextexShaders,
+
+                fragmentShader: JackFragmentsShaders
+
+            } );
+            this.astreMesh = new THREE.Mesh( this.geometry, this.jackPlanetMaterial);
+        } else {
+            this.astreMesh = new THREE.Mesh( this.geometry, this.material);
+        }
         this.astreMesh.geometry.setAttribute('uv2', new THREE.BufferAttribute(this.astreMesh.geometry.attributes.uv.array, 2))
         this.astreMesh.name = this.data.astreName
         this.astreMesh.scale.set(this.data.size, this.data.size, this.data.size);
